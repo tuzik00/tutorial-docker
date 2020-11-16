@@ -1,14 +1,22 @@
 {
   "name": "my-project",
   "version": "1.0.0",
-  "private": true,
   "description": "",
+  "private": true,
+  "author": "",
+  "license": "ISC",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm --prefix packages/core run dev",
+    "start": "npm --prefix packages/core run start",
+    "build": "npm --prefix packages/core run build"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "lerna": "^3.14.1"
+  },
+  "dependencies": {
+    "yarn": "^1.22.4"
+  }
 }
